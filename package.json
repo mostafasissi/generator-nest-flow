@@ -1,0 +1,37 @@
+{
+  "name": "generator-nest-flow",
+  "version": "0.0.1",
+  "description": "A Yeoman generator for NestJS projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mostafasissi/generator-nest-flow.git"
+  },
+  "keywords": [
+    "javascript",
+    "nestjs",
+    "generator",
+    "yeoman-generator",
+    "typescript",
+    "scaffold",
+    "builder",
+    "generator"
+  ],
+  "author": "SISSI Mostafa (mostafasissi@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mostafasissi/generator-nest-flow/issues"
+  },
+  "homepage": "https://github.com/mostafasissi/generator-nest-flow#readme",
+  "dependencies": {
+    "decamelize": "^6.0.0",
+    "uppercamelcase": "^3.0.0",
+    "yeoman-generator": "^5.9.0"
+  },
+  "files": [
+    "generators"
+  ]
+}
