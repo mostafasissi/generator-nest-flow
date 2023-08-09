@@ -1,8 +1,7 @@
 # compiled output
-/dist
-/node_modules
+node_modules/
+.idea/
 # IDEs and editors
-/.idea
 .project
 .classpath
 .c9/
