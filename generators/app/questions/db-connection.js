@@ -10,8 +10,8 @@ module.exports = [
         type: 'list',
         name: 'databaseType',
         message: 'Which database type do you want to use?',
-        default: 'MySQL',
-        choices: ['MySQL', 'PostgreSQL',],
+        default: 'mysql',
+        choices: ['mysql', 'postgresql',],
     },
     {
         when: answers => answers.addDatabaseConnection === true,
@@ -59,6 +59,6 @@ module.exports = [
         type: 'list',
         name: 'ormType',
         message: 'Select an ORM:',
-        choices: ['TypeORM', 'Sequelize', 'Other'],
+        choices: ['TypeORM', 'Prisma', 'Other'],
     },
 ]

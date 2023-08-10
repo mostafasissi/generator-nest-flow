@@ -12,11 +12,11 @@ module.exports = function (moduleName, modulePath , appModulePath) {
             // Import the newly generated module
             const newModuleImport = `import { ${moduleName} } from '${modulePath}';`;
             appModuleContent = newModuleImport + "\n" + appModuleContent;
-
+            console.log(appModuleContent);
             // Include the new module in the imports array
             appModuleContent = appModuleContent.replace(
-                /(imports\s*:\s*\[\s*)/,
-                `$1${moduleName} ,`
+                /(imports\s*:\s*\[)/,
+                `$1${moduleName},`
             );
             // Write the updated content back to the AppModule
             fs.writeFileSync(appModulePath, appModuleContent);
