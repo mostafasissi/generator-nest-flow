@@ -10,8 +10,8 @@ module.exports = [
         type: 'list',
         name: 'databaseType',
         message: 'Which database type do you want to use?',
-        default: 'mysql',
-        choices: ['mysql', 'postgresql',],
+        default: 'database',
+        choices: ['mysql','postgresql',],
     },
     {
         when: answers => answers.addDatabaseConnection === true,

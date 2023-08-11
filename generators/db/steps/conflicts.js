@@ -1,2 +1,3 @@
-module.exports = {
+module.exports =function () {
+    this.conflicts.force = true ; 
 };

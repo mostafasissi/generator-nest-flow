@@ -31,16 +31,27 @@ module.exports = function () {
             // update the AppModule
             updateAppModule('PrismaModule', './prisma' , globalAppModulePath);
 
+        } else if (this.options.answers.ormType === 'TypeORM'){
+            this.fs.copyTpl(
+                this.templatePath('db-connection-with-orm/typeorm/database'),
+                this.destinationPath(`${pathToApp}/src/database`),
+                {
+                    databaseType : this.options.answers.databaseType
+                }
+            )
+
+            // update the AppModule
+            updateAppModule('DatabaseModule', './database' , globalAppModulePath);
         }
     }
     else {
-        if (this.options.answers.databaseType === 'mysql') {
+        if (this.options.answers.databaseType === 'database') {
             this.fs.copyTpl(
-                this.templatePath('db-connection-without-orm/mysql'),
+                this.templatePath('db-connection-without-orm/database'),
                 this.destinationPath(`${pathToApp}/src/mysql`),
             )
             // update de appModule
-            updateAppModule('MysqlModule', './mysql' ,globalAppModulePath  );
+            updateAppModule('MysqlModule', './database' ,globalAppModulePath  );
             this.log('updating the AppModule ....');
         }
         else if (this.options.answers.databaseType === 'postgresql'){
@@ -52,5 +63,4 @@ module.exports = function () {
             this.log('updating the AppModule ....');
         }
     }
-
 }
