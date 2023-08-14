@@ -1,9 +1,9 @@
 const Generator = require('yeoman-generator');
 const generatorSteps = require('./steps');
-module.exports = class DatabaseConnectionGenerator extends Generator {
+module.exports = class AuthenticationGenerator extends Generator {
     constructor(args, opts) {
         super(args, opts);
-        this.log('Initializing DatabaseConnectionGenerator ...');
+        this.log('Initializing AuthenticationGenerator ...');
     }
     get configuring() {
         return generatorSteps.configuring;

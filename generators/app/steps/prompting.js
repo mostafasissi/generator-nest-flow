@@ -35,7 +35,12 @@ module.exports = {
             'Database Connection',
             questions.dbConnection
         );
+    },
+    addAthentication(){
+        return askQuestions.call(
+            this ,
+            'Authentication ',
+            questions.addAuthentication
+            )
     }
-
-
 };
