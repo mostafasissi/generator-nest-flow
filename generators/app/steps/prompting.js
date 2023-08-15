@@ -16,6 +16,13 @@ module.exports = {
             'Application and host',
             questions.app);
     },
+    askAboutWorkplace(){
+        return askQuestions.call(
+            this,
+            'Workplace',
+            questions.workplace
+        );
+    },
     asKDescription(){
         return askQuestions.call(
             this ,

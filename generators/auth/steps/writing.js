@@ -3,7 +3,8 @@ module.exports = function () {
     const payload = {
         answers: this.options.answers,
     }
-    const pathToApp = this.options.answers.projectName;
+    const pathToApp =
+        `${this.options.answers.workplace}/${this.options.answers.projectName}`;
     const globalAppModulePath =
         this.destinationPath(`${pathToApp}/src/app.module.ts`);
 
