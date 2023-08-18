@@ -46,8 +46,15 @@ module.exports = {
     addAthentication(){
         return askQuestions.call(
             this ,
-            'Authentication ',
+            'Authentication',
             questions.addAuthentication
             )
+    },
+    askAboutTest(){
+        return askQuestions.call(
+            this,
+            'Tests',
+            questions.addTest
+        )
     }
 };

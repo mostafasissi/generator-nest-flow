@@ -4,7 +4,8 @@ module.exports = [
         type : 'input',
         name : 'workplace',
         message : 'Enter an workplace for your project (absolute path):',
-        default : process.cwd(),
+        default : 'C:\\Users\\hp\\Desktop\\nestjs_cli\\worktest' ,
+            //process.cwd(),
         validate: (input) => {
             const absolutePath = path.isAbsolute(input);
             if (!absolutePath) {

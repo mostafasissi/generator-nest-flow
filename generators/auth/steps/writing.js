@@ -3,11 +3,11 @@ module.exports = function () {
     const payload = {
         answers: this.options.answers,
     }
+ //console.log(this)
     const pathToApp =
         `${this.options.answers.workplace}/${this.options.answers.projectName}`;
     const globalAppModulePath =
         this.destinationPath(`${pathToApp}/src/app.module.ts`);
-
     // copier the .env file
     this.fs.copyTpl(
         this.templatePath('.env'),
@@ -40,6 +40,17 @@ module.exports = function () {
             )
             //update the appModule
             updateAppModule('AuthModule','./auth' , globalAppModulePath);
+
+
+            // add end-to-end tests
+            if (this.options.answers.addTest === true){
+                if(this.options.answers.testType === 'Unit Test'){
+                    this.fs.copyTpl(
+                        this.templatePath('prisma-auth/test/e2e-jest-pactum'),
+                        this.destinationPath(`${pathToApp}/test`)
+                    )
+                }
+            }
         }
         else if (this.options.answers.ormType === 'TypeORM'){
             this.fs.copyTpl(

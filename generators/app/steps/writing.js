@@ -5,7 +5,6 @@ module.exports = function () {
     }
     // <::> copier the basic template <::>
     const pathToApp = `${this.answers.workplace}/${this.answers.projectName}`;
-    console.log(payload);
     this.fs.copyTpl(
         this.templatePath('basic-template/**'),
         this.destinationPath(`${pathToApp}`),
