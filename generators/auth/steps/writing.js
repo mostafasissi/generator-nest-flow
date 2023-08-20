@@ -42,13 +42,21 @@ module.exports = function () {
             updateAppModule('AuthModule','./auth' , globalAppModulePath);
 
 
+            console.log(this.options.answers);
             // add end-to-end tests
             if (this.options.answers.addTest === true){
-                if(this.options.answers.testType === 'Unit Test'){
-                    this.fs.copyTpl(
-                        this.templatePath('prisma-auth/test/e2e-jest-pactum'),
-                        this.destinationPath(`${pathToApp}/test`)
-                    )
+                if(this.options.answers.testType === 'End-To-End Test'){
+                    if (this.options.answers.testFramework === 'Supertest'){
+                        this.fs.copyTpl(
+                            this.templatePath('prisma-auth/test/e2e-supertest'),
+                            this.destinationPath(`${pathToApp}/test`)
+                        )
+                    } else if (this.options.answers.testFramework === 'Pactum'){
+                        this.fs.copyTpl(
+                            this.templatePath('prisma-auth/test/e2e-jest-pactum'),
+                            this.destinationPath(`${pathToApp}/test`)
+                        )
+                    }
                 }
             }
         }
