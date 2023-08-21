@@ -42,7 +42,6 @@ module.exports = function () {
             updateAppModule('AuthModule','./auth' , globalAppModulePath);
 
 
-            console.log(this.options.answers);
             // add end-to-end tests
             if (this.options.answers.addTest === true){
                 if(this.options.answers.testType === 'End-To-End Test'){
