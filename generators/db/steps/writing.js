@@ -56,6 +56,7 @@ module.exports = function () {
                 // update de appModule
                 updateAppModule('MysqlModule', './mysql' ,globalAppModulePath  );
                 this.log('updating the AppModule ....');
+
             }
             else if (this.options.answers.databaseType === 'postgresql'){
                 this.fs.copyTpl(
@@ -64,6 +65,24 @@ module.exports = function () {
                 )
                 updateAppModule('PostgresModule', './postgres' ,globalAppModulePath);
                 this.log('updating the AppModule ....');
+            }
+
+            // add units tests for database connection service
+            if(this.options.answers.addTest){
+                if(this.options.answers.testType === 'Unit Test'){
+                    if (this.options.answers.databaseType === 'mysql') {
+                        this.fs.copyTpl(
+                            this.templatePath('db-connection-without-orm/tests/unit-test/mysql.service.spec.ts'),
+                            this.destinationPath(`${pathToApp}/src/mysql/`)
+                        )
+                    }
+                    else if (this.options.answers.databaseType === 'postgresql') {
+                        this.fs.copyTpl(
+                            this.templatePath('db-connection-without-orm/tests/unit-test/postgres.service.spec.ts'),
+                            this.destinationPath(`${pathToApp}/src/postgres/`)
+                        )
+                    }
+                }
             }
         }
     }

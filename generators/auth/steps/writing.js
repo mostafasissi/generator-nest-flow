@@ -32,14 +32,14 @@ module.exports = function () {
                 this.destinationPath(`${pathToApp}/src/prisma`)
             )
             // update appModule
-            updateAppModule('PrismaModule', './prisma' , globalAppModulePath);
+            updateAppModule('PrismaModule', './prisma/prisma.module' , globalAppModulePath);
             // copier the auth module ;
             this.fs.copyTpl(
                 this.templatePath('prisma-auth/auth'),
                 this.destinationPath(`${pathToApp}/src/auth`)
             )
             //update the appModule
-            updateAppModule('AuthModule','./auth' , globalAppModulePath);
+            updateAppModule('AuthModule','./auth/auth.module' , globalAppModulePath);
 
 
             // add end-to-end tests
@@ -69,7 +69,7 @@ module.exports = function () {
             )
 
             // update the AppModule
-            updateAppModule('DatabaseModule', './database' , globalAppModulePath);
+            updateAppModule('DatabaseModule', './database/database.module' , globalAppModulePath);
 
             // copier the auth module ;
             this.fs.copyTpl(
@@ -77,7 +77,7 @@ module.exports = function () {
                 this.destinationPath(`${pathToApp}/src/auth`)
             )
             //update the appModule
-            updateAppModule('AuthModule','./auth' , globalAppModulePath);
+            updateAppModule('AuthModule','./auth/auth.module' , globalAppModulePath);
 
         }
     }
