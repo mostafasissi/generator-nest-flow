@@ -57,6 +57,12 @@ module.exports = function () {
                         )
                     }
                 }
+                else if(this.options.answers.testType === 'Unit Test'){
+                    this.fs.copyTpl(
+                        this.templatePath('prisma-auth/test/unit-test/**'),
+                        this.destinationPath(`${pathToApp}/src/`)
+                    )
+                }
             }
         }
         else if (this.options.answers.ormType === 'TypeORM'){
