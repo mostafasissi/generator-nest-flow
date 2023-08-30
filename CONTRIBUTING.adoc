@@ -37,6 +37,6 @@ Please note that this project follows a [Code of Conduct](CODE_OF_CONDUCT.adoc).
 Thank you for contributing to Nest-Flow!
 
 Mostafa Sissi
-Email: mostafasissi@gmail.com
-LinkedIn: [Mostafa Sissi](https://www.linkedin.com/in/mostafa-sissi-290868223/)
+- Email: mostafasissi@gmail.com
+- LinkedIn: [Mostafa Sissi](https://www.linkedin.com/in/mostafa-sissi-290868223/)
 30/08/2023
