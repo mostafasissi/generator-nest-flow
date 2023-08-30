@@ -1,0 +1,42 @@
+= Contributing to Nest-Flow
+
+Thank you for considering contributing to Nest-Flow, a Nest.js code generator! We appreciate your interest in making this project better. This guide will help you understand how you can contribute.
+
+== Reporting Issues
+
+If you encounter a problem with Nest-Flow or have a feature request, please follow these steps:
+
+1. Check the existing issues to ensure your issue hasn't already been reported or addressed.
+2. If your issue isn't already tracked, open a new issue describing the problem or feature request. Be as detailed as possible and provide steps to reproduce the issue if applicable.
+
+== Suggesting Enhancements
+
+We welcome suggestions for improving Nest-Flow. To suggest an enhancement, follow these steps:
+
+1. Check the existing issues and pull requests to ensure your suggestion hasn't already been made or addressed.
+2. Open a new issue describing your enhancement idea. Be clear and concise in your description and explain how it benefits the project.
+
+== Pull Requests
+
+We encourage you to submit pull requests that fix bugs, add new features, or improve documentation for Nest-Flow. To contribute code, please follow these steps:
+
+1. Fork the repository to your GitHub account.
+2. Create a new branch for your work: `git checkout -b your-branch-name`.
+3. Make your changes, adhering to the project's coding style and conventions.
+4. Write tests if applicable and ensure all existing tests pass.
+5. Commit your changes with a clear and descriptive commit message.
+6. Push your branch to your fork: `git push origin your-branch-name`.
+7. Open a pull request on the [GitHub repository](https://github.com/mostafasissi/generator-nest-flow.git) with a detailed explanation of your changes.
+
+We will review your pull request as soon as possible and provide feedback. Please be patient, and thank you for your contribution!
+
+== Code of Conduct
+
+Please note that this project follows a [Code of Conduct](CODE_OF_CONDUCT.adoc). We expect all contributors and participants to adhere to it. Any violations should be reported to [mostafasissi@gmail.com](mailto:mostafasissi@gmail.com).
+
+Thank you for contributing to Nest-Flow!
+
+Mostafa Sissi
+Email: mostafasissi@gmail.com
+LinkedIn: [Mostafa Sissi](https://www.linkedin.com/in/mostafa-sissi-290868223/)
+30/08/2023
