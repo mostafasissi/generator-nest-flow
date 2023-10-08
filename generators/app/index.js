@@ -1,5 +1,6 @@
 const Generator = require('yeoman-generator');
 const generatorSteps = require('./steps');
+const chalk = require('chalk');
 module.exports = class extends Generator {
     constructor(args, opts) {
         super(args, opts);

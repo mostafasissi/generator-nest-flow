@@ -29,7 +29,8 @@
   "dependencies": {
     "decamelize": "^6.0.0",
     "uppercamelcase": "^3.0.0",
-    "yeoman-generator": "^5.9.0"
+    "yeoman-generator": "^5.9.0",
+    "yosay": "^2.0.2"
   },
   "files": [
     "generators"
